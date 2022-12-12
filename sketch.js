@@ -1,30 +1,21 @@
 //corre solo una vez cuando inicia el programa
 function setup(){
-    console.log("setup");
+    console.log("setup - frameCount:"+frameCount);
     
-    //createCanvas: ancho, alto en píxeles
-    createCanvas(1000,1000);
-background(180);
-    //background RGB : Define el color del fondo
-    // RED --> background(255,0,0);
-    // GREEN --> background(0,255, 0);
-    // BLUE --> background(0,255, 0);
+    createCanvas(900,900);
+    background(125);
+
 
 }
 
-//corre continuamente después de la función setup
 function draw(){
-    clear();
-    ellipse(mouseX, mouseY, 500, 500)
-if((mouseX<500)&&(mouseY<500)){
-    fill(color("red"));
-}else if((mouseX<500)&&(mouseY>500)){
-    fill(color("yellow"));
-}else if((mouseX>500)&&(mouseY<500)){
-    fill(color("lime"));
-}else if((mouseX>500)&&(mouseY>500)){
-    fill(color("turquoise"));
+    console.log("draw - frameCount:"+frameCount);
+    fill(10,200,175)
+    triangle(775,625,450,150,125,625)
+    fill(160,5,15);
+    ellipse(height/2,width/2,450,450)
+    fill(10,175,80)
+    triangle(600,325,300,325,450,700)
+  
     
-}
-
 }
